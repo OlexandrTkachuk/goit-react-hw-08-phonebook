@@ -1,4 +1,10 @@
+// system
+import { useDispatch } from 'react-redux';
+import { useState } from 'react';
+import { logIn } from 'redux/auth/auth-operations';
 import { NavLink, Link } from 'react-router-dom';
+
+// styles
 import {
   Form,
   FormWrapper,
@@ -13,6 +19,35 @@ import {
 } from './LoginForm.styled';
 
 const LoginForm = () => {
+  const dispatch = useDispatch();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleInputChange = event => {
+    const { name, value } = event.currentTarget;
+
+    if (name === 'email') {
+      setEmail(value);
+    }
+
+    if (name === 'password') {
+      setPassword(value);
+    }
+  };
+
+  const clearForm = () => {
+    setEmail('');
+    setPassword('');
+  };
+
+  const handleSubmit = event => {
+    event.preventDefault();
+
+    dispatch(logIn({ email, password }));
+
+    clearForm();
+  };
+
   return (
     <>
       <Login>
@@ -21,26 +56,30 @@ const LoginForm = () => {
             <Link to="/">
               <Logo>Phonebook</Logo>
             </Link>
-            <LoginText>Please, Log In to use phonebook.</LoginText>
+            <LoginText>Please, Log In to use phonebook</LoginText>
           </LoginInfoWrapper>
 
           <FormWrapper>
-            <Form>
+            <Form onSubmit={handleSubmit} autoComplete="off">
               <LoginInput
                 type="text"
-                className="loginInput"
                 placeholder="Email"
+                name="email"
+                value={email}
+                onChange={handleInputChange}
               />
               <LoginInput
                 type="text"
-                className="loginInput"
                 placeholder="Password"
+                name="password"
+                value={password}
+                onChange={handleInputChange}
               />
 
               <LoginButton type="submit">Log in</LoginButton>
 
               <NavLink to="/register">
-                <RegisterButton type="button" className="loginButton">
+                <RegisterButton type="button">
                   Create a new account
                 </RegisterButton>
               </NavLink>

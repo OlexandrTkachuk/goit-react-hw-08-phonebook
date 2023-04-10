@@ -71,7 +71,7 @@ export const RegisterButton = styled.button`
   height: 50px;
   border-radius: 10px;
   border: none;
-  background-color: #1775ee;
+  background-color: #369c5d;
   color: white;
   font-size: 20px;
   font-weight: 500;
@@ -89,7 +89,7 @@ export const LoginButton = styled.button`
   height: 50px;
   border-radius: 10px;
   border: none;
-  background-color: #42b72a;
+  background-color: #d8674a;
   color: white;
   font-size: 20px;
   font-weight: 500;

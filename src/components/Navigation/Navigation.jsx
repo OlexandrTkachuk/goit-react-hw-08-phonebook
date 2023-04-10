@@ -1,13 +1,18 @@
+// system
+import { useSelector } from 'react-redux';
+import { selectIsLoggedIn } from 'redux/auth/auth-selectors';
+
+// styles
 import { NavigationWrapper, StyledNavLink } from './Navigation.styled';
 
 const Navigation = () => {
+  const isLoggedIn = useSelector(selectIsLoggedIn);
+
   return (
     <NavigationWrapper>
       <StyledNavLink to="/">Home</StyledNavLink>
-      <StyledNavLink to="/contacts">Contacts</StyledNavLink>
-      <StyledNavLink to="/register">Register</StyledNavLink>
-      <StyledNavLink to="/login">Log In</StyledNavLink>
-      {/* {isLoggedIn && <StyledNavLink to="/contacts">Contacts</StyledNavLink>} */}
+
+      {isLoggedIn && <StyledNavLink to="/contacts">Contacts</StyledNavLink>}
     </NavigationWrapper>
   );
 };

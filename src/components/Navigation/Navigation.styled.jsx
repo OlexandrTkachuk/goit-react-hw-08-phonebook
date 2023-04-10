@@ -7,6 +7,7 @@ export const StyledNavLink = styled(NavLink)`
   color: #001a00;
   text-decoration: none;
   margin-right: 10px;
+
   &.active {
     color: #369c5d;
   }
@@ -14,8 +15,7 @@ export const StyledNavLink = styled(NavLink)`
 
 export const NavigationWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 170px;
+  gap: 20px;
   padding: 20px 0;
 `;
