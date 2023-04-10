@@ -1,11 +1,8 @@
 import styled from '@emotion/styled';
 
 export const Register = styled.div`
-  height: 100vh;
-  background-color: #f0f2f5;
   display: flex;
   justify-content: center;
-  padding-top: 100px;
 `;
 
 export const RegisterWrapper = styled.div`
@@ -25,9 +22,9 @@ export const RegisterInfoWrapper = styled.div`
 `;
 
 export const Logo = styled.h2`
-  font-size: 60px;
+  font-size: 54px;
   font-weight: 800;
-  color: #1775ee;
+  color: #d8674a;
   margin-bottom: 10px;
 `;
 

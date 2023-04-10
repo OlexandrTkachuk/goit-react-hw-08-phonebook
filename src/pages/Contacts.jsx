@@ -3,10 +3,13 @@ import ContactList from 'components/PhonebookComponent/ContactList/ContactList';
 import Filter from 'components/PhonebookComponent/Filter/Filter';
 import PhonebookForm from 'components/PhonebookComponent/PhonebookForm/PhonebookForm';
 import Section from 'components/Section/Section';
+import { HomeTitle } from './Home';
 
 const Contacts = () => {
   return (
     <>
+      <HomeTitle>Contacts Page</HomeTitle>
+
       <Section title="Phonebook Form">
         <PhonebookForm />
       </Section>

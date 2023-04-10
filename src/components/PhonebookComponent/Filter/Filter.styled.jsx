@@ -1,7 +1,8 @@
 import styled from '@emotion/styled';
 
 export const FilterInput = styled.input`
-  height: 36px;
+  border: 1px solid transparent;
+  outline: none;
 `;
 
 export const FilterWrapper = styled.div`
@@ -12,16 +13,20 @@ export const FilterWrapper = styled.div`
 
 export const Button = styled.button`
   cursor: pointer;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
   outline: none;
   border: none;
-  padding: 8px 12px;
+  padding: 10px 16px;
   border-radius: 8px;
+  background-color: orangered;
+  color: #fff;
+  opacity: 0.8;
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 250ms ease;
 
   :hover {
-    background-color: orangered;
-    color: white;
+    opacity: 1;
   }
 `;

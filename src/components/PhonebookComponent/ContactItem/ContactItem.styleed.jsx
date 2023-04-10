@@ -10,7 +10,7 @@ export const Item = styled.li`
   padding: 8px;
   border: 1px solid black;
   border-radius: 6px;
-  background-color: #43ca9e;
+  background-color: lightgray;
 
   :not(:last-child) {
     margin-bottom: 10px;

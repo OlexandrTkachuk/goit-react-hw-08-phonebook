@@ -5,7 +5,7 @@ import { selectContacts } from 'redux/selectors';
 import { addContact } from 'redux/contactsSlise';
 
 import { Notify } from 'notiflix';
-import { Button, Form, FormWrapper } from './PhonebookForm.styled';
+import { Button, Form, FormInput, FormWrapper } from './PhonebookForm.styled';
 import { nanoid } from '@reduxjs/toolkit';
 
 const PhonebookForm = () => {
@@ -59,7 +59,7 @@ const PhonebookForm = () => {
   return (
     <Form onSubmit={handleSubmit}>
       <FormWrapper>
-        <input
+        <FormInput
           type="text"
           name="name"
           value={name}
@@ -70,7 +70,7 @@ const PhonebookForm = () => {
           onChange={handleInputChange}
         />
 
-        <input
+        <FormInput
           type="tel"
           name="phone"
           value={phone}
