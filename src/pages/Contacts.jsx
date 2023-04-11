@@ -1,7 +1,11 @@
 // system
-import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
 import { fetchContacts } from 'redux/contacts/contacts-operations';
+import {
+  selectError,
+  selectIsLoading,
+} from 'redux/contacts/contacts-selectors';
 
 // components
 import ContactList from 'components/PhonebookComponent/ContactList/ContactList';
@@ -12,10 +16,6 @@ import LoadingSpinner from 'components/Loading/LoadingSpinner';
 
 // styles
 import { HomeTitle } from './Home';
-import {
-  selectError,
-  selectIsLoading,
-} from 'redux/contacts/contacts-selectors';
 
 const Contacts = () => {
   const dispatch = useDispatch();

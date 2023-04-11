@@ -9,6 +9,7 @@ import { logOut } from 'redux/auth/auth-operations';
 const handlePending = state => {
   state.isLoading = true;
 };
+
 const handleRejected = (state, action) => {
   state.isLoading = false;
   state.error = action.payload;
@@ -21,8 +22,8 @@ const contactsSlice = createSlice({
     isLoading: false,
     error: null,
   },
-  extraReducers: build => {
-    build
+  extraReducers: builder => {
+    builder
       // fetch contacts
       .addCase(fetchContacts.pending, handlePending)
       .addCase(fetchContacts.rejected, handleRejected)
