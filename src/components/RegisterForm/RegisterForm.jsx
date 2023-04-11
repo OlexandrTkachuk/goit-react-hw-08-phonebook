@@ -97,7 +97,7 @@ const RegisterForm = () => {
               />
 
               <RegisterInput
-                type="text"
+                type="password"
                 placeholder="Password"
                 name="password"
                 value={password}
@@ -105,7 +105,7 @@ const RegisterForm = () => {
               />
 
               <RegisterInput
-                type="text"
+                type="password"
                 placeholder="Password again"
                 name="secondPassword"
                 value={secondPassword}

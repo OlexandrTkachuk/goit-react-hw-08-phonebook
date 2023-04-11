@@ -1,11 +1,31 @@
+// system
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchContacts } from 'redux/contacts/contacts-operations';
+
 // components
 import ContactList from 'components/PhonebookComponent/ContactList/ContactList';
 import Filter from 'components/PhonebookComponent/Filter/Filter';
 import PhonebookForm from 'components/PhonebookComponent/PhonebookForm/PhonebookForm';
 import Section from 'components/Section/Section';
+import LoadingSpinner from 'components/Loading/LoadingSpinner';
+
+// styles
 import { HomeTitle } from './Home';
+import {
+  selectError,
+  selectIsLoading,
+} from 'redux/contacts/contacts-selectors';
 
 const Contacts = () => {
+  const dispatch = useDispatch();
+  const isLoading = useSelector(selectIsLoading);
+  const error = useSelector(selectError);
+
+  useEffect(() => {
+    dispatch(fetchContacts());
+  }, [dispatch]);
+
   return (
     <>
       <HomeTitle>Contacts Page</HomeTitle>
@@ -18,9 +38,17 @@ const Contacts = () => {
         <Filter />
       </Section>
 
-      <Section title="Contacts">
-        <ContactList />
-      </Section>
+      {isLoading && <LoadingSpinner />}
+
+      {error ? (
+        <Section title="Error">
+          <div style={{ textAlign: 'center', fontSize: 24 }}>{error}</div>
+        </Section>
+      ) : (
+        <Section title="Contact List">
+          <ContactList />
+        </Section>
+      )}
     </>
   );
 };

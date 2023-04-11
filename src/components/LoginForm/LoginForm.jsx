@@ -69,7 +69,7 @@ const LoginForm = () => {
                 onChange={handleInputChange}
               />
               <LoginInput
-                type="text"
+                type="password"
                 placeholder="Password"
                 name="password"
                 value={password}
