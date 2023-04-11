@@ -8,7 +8,7 @@ import { Button, Item, Text } from './ContactItem.styleed';
 
 const ContactItem = ({ contact }) => {
   const dispatch = useDispatch();
-  const { id, name, phone } = contact;
+  const { id, name, number } = contact;
 
   const handleDelete = () => dispatch(deleteContact(id));
 
@@ -16,7 +16,7 @@ const ContactItem = ({ contact }) => {
     <>
       <Item>
         <Text>{name}</Text>
-        <p>{phone}</p>
+        <p>{number}</p>
         <Button type="button" onClick={handleDelete}>
           X
         </Button>
@@ -29,7 +29,7 @@ ContactItem.propTypes = {
   contact: PropTypes.shape({
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-    phone: PropTypes.string.isRequired,
+    number: PropTypes.string.isRequired,
   }),
 };
 
