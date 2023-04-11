@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/goit-react-hw-08-phonebook/static/css/main.7eb89b1c.css",
-    "main.js": "/goit-react-hw-08-phonebook/static/js/main.4a6effe1.js",
+    "main.js": "/goit-react-hw-08-phonebook/static/js/main.de3bfa86.js",
     "static/js/415.b0c6e383.chunk.js": "/goit-react-hw-08-phonebook/static/js/415.b0c6e383.chunk.js",
-    "static/js/526.018c1f02.chunk.js": "/goit-react-hw-08-phonebook/static/js/526.018c1f02.chunk.js",
+    "static/js/526.47f95fd3.chunk.js": "/goit-react-hw-08-phonebook/static/js/526.47f95fd3.chunk.js",
     "static/js/284.ce23f612.chunk.js": "/goit-react-hw-08-phonebook/static/js/284.ce23f612.chunk.js",
     "static/js/427.ec1b2be6.chunk.js": "/goit-react-hw-08-phonebook/static/js/427.ec1b2be6.chunk.js",
     "static/js/617.7facd97e.chunk.js": "/goit-react-hw-08-phonebook/static/js/617.7facd97e.chunk.js",
     "static/media/phonebook.svg.png": "/goit-react-hw-08-phonebook/static/media/phonebook.svg.b96dcc85f857f3be48a8.png",
     "index.html": "/goit-react-hw-08-phonebook/index.html",
     "main.7eb89b1c.css.map": "/goit-react-hw-08-phonebook/static/css/main.7eb89b1c.css.map",
-    "main.4a6effe1.js.map": "/goit-react-hw-08-phonebook/static/js/main.4a6effe1.js.map",
+    "main.de3bfa86.js.map": "/goit-react-hw-08-phonebook/static/js/main.de3bfa86.js.map",
     "415.b0c6e383.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/415.b0c6e383.chunk.js.map",
-    "526.018c1f02.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/526.018c1f02.chunk.js.map",
+    "526.47f95fd3.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/526.47f95fd3.chunk.js.map",
     "284.ce23f612.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/284.ce23f612.chunk.js.map",
     "427.ec1b2be6.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/427.ec1b2be6.chunk.js.map",
     "617.7facd97e.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/617.7facd97e.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7eb89b1c.css",
-    "static/js/main.4a6effe1.js"
+    "static/js/main.de3bfa86.js"
   ]
 }
